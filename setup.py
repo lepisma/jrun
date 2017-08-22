@@ -7,7 +7,7 @@ project_url = "https://github.com/lepisma/jrun"
 
 setup(
     name="jrun",
-    version="0.1.0",
+    version="0.1.1",
     description="Run jupyter notebooks as command line scripts with variable overrides",
     long_description=readme,
     author="Abhinav Tushar",
