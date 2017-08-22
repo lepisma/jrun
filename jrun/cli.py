@@ -1,5 +1,6 @@
 import subprocess
 import sys
+import os
 
 def help():
     return "\n".join([
@@ -57,7 +58,7 @@ def execute_notebook(notebook, var_string):
     subprocess.run(["jupyter", "nbconvert", "--to", "script", notebook],
                    stderr=subprocess.DEVNULL)
     subprocess.run(["python", script, var_string])
-    subprocess.run(f"rm {script}", shell=True)
+    os.remove(script)
 
 def main():
     if len(sys.argv) not in [2, 3]:
