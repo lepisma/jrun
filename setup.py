@@ -16,6 +16,7 @@ setup(
     install_requires=[],
     keywords="",
     packages=find_packages(),
+    entry_points={"console_scripts": ["jlit=jlit.cli:main"]},
     classifiers=(
         "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
         "Natural Language :: English",

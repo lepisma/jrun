@@ -1,1 +1,1 @@
-from .jlit import *
+from .cli import init
