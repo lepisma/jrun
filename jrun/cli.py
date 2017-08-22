@@ -3,12 +3,12 @@ import sys
 
 def help():
     return "\n".join([
-        " jlit",
+        " jrun",
         " ----",
-        " Usage: jlit <notebook> [<var-definition-string>]",
+        " Usage: jrun <notebook> [<var-definition-string>]",
         " Examples:",
-        "   jlit notebook.ipynb \"name = 'var'; items = [1, 2]\" ",
-        "   jlit notebook.ipynb"
+        "   jrun notebook.ipynb \"name = 'var'; items = [1, 2]\" ",
+        "   jrun notebook.ipynb"
     ])
 
 def isnotebook():
@@ -32,7 +32,6 @@ def jin(name, value):
     else:
         # Parse command line arguments for value
         # Defaults to provided value
-        assert len(sys.argv) == 2, "Error in usage"
         args = parse_variables(sys.argv[1])
         if name in args:
             return args[name]
