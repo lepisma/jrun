@@ -1,1 +1,1 @@
-from .cli import init
+from .cli import jin
